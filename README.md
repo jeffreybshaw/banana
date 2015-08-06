@@ -1,6 +1,6 @@
 The banana is a really good fruit
 
-Here's (why)[#rationale]
+Here's [why](#rationale)
 
 # <a name="rationale"></a>Rationale
 
