@@ -17,8 +17,13 @@ jobs:
     - name: Install packages
       run: |
         sudo apt-get update && sudo apt-get install -y\
-          build-essential libbpf-dev libbsd-dev libelf-dev libjson-c-dev\
-           libnl-3-dev libnl-cli-3-dev libnuma-dev libpcap-dev meson\
-           pkg-config
+          build-essential libbsd-dev libelf-dev libjson-c-dev\
+          libnl-3-dev libnl-cli-3-dev libnuma-dev libpcap-dev meson\
+          pkg-config
+    - name: Install libbpf
+      run: |
+        wget -q -O - https://github.com/libbpf/libbpf/archive/refs/tags/v0.3.tar.gz \
+        | tar -xzC ${GITHUB_WORKSPACE} \
+        && make -j -C ${GITHUB_WORKSPACE}/libbpf-0.3/src install
     - name: make
       run: make
