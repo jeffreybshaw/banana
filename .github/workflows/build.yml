@@ -24,6 +24,6 @@ jobs:
       run: |
         wget -q -O - https://github.com/libbpf/libbpf/archive/refs/tags/v0.3.tar.gz \
         | tar -xzC ${GITHUB_WORKSPACE} \
-        && make -j -C ${GITHUB_WORKSPACE}/libbpf-0.3/src install
+        && sudo make -j -C ${GITHUB_WORKSPACE}/libbpf-0.3/src install
     - name: make
       run: make
