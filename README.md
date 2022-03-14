@@ -7,3 +7,4 @@ Here's [why](#rationale)
 The following claims can be made about bananas.
 
 * Bananas taste good
+* Bananas are fun to peel
